@@ -1,77 +1,152 @@
 <!DOCTYPE html>
-    <title></title>
-    <head> 
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2> Charlie's TWS Store </h2>
-                    <hr class="hr" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlie's TWS Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .product-card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .order-summary {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-start">
+            </div>
+        </div>
+        <div class="row header text-center">
+            <div class="col-12">
+                <h2> Charlie's TWS Store </h2>
+                <p> Charlie Menor BSIT-3B </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product1"><strong>Airpods Pro</strong></label>
+                    <img src="image/Airpods Pro 2nd generation.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product1" id="price1">12999.00</label>
+                    <input type="number" class="form-control mt-2" id="qty1" placeholder="Enter quantity"/>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4 text-center">
-                    <label id="product1"> Airpods Pro </label>
-                    <img src="image/Airpods Pro 2nd generation.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product1" id="price1">27000.00</label>
-                    <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product2"><strong>Airsounds One</strong></label>
+                    <img src="image/Airsounds One True.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product2" id="price2">5999.00</label>
+                    <input type="number" class="form-control mt-2" id="qty2" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product2"> Airsounds One </label>
-                    <img src="image/Airsounds One True.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product2" id="price2">37000.00</label>
-                    <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product3"><strong>Awei TA10</strong></label>
+                    <img src="image/Awei TA10 TWS.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product3" id="price3">3799.00</label>
+                    <input type="number" class="form-control mt-2" id="qty3" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product3"> Awei TA10 </label>
-                    <img src="image/Awei TA10 TWS.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product3" id="price3">37000.00</label>
-                    <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product4"><strong>Baseus WM01</strong></label>
+                    <img src="image/Baseus WM01 TWS.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product4" id="price4">2999.00</label>
+                    <input type="number" class="form-control mt-2" id="qty4" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product4"> Baseus WM01 </label>
-                    <img src="image/Baseus WM01 TWS.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product4" id="price4">37000.00</label>
-                    <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product5"><strong>Edifier X3</strong></label>
+                    <img src="image/Edifier X3 Lite TWS.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product5" id="price5">4999.00</label>
+                    <input type="number" class="form-control mt-2" id="qty5" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product5"> Edifier X3 </label>
-                    <img src="image/Edifier X3 Lite TWS.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product5" id="price5">37000.00</label>
-                    <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product6"><strong>JBL Tour Pro</strong></label>
+                    <img src="image/JBL Tour Pro TWS.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product6" id="price6">11999.00</label>
+                    <input type="number" class="form-control mt-2" id="qty6" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product6"> JBL Tour Pro </label>
-                    <img src="image/JBL Tour Pro TWS.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product6" id="price6">37000.00</label>
-                    <input type="number" class="form-control" id="qty6" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product7"><strong>JBL TUNE BEAM</strong></label>
+                    <img src="image/JBL TUNE BEAM.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product7" id="price7">6999.00</label>
+                    <input type="number" class="form-control mt-2" id="qty7" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product7"> JBL TUNE BEAM </label>
-                    <img src="image/JBL TUNE BEAM.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product7" id="price7">37000.00</label>
-                    <input type="number" class="form-control" id="qty7" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 text-center">
+                <div class="product-card">
+                    <label id="product8"><strong>Realme buds T300</strong></label>
+                    <img src="image/realme buds t300.jpg" class="img-thumbnail product-image" data-bs-toggle="modal" data-bs-target="#imageModal"/><br>
+                    <label for="product8" id="price8">3700.00</label>
+                    <input type="number" class="form-control mt-2" id="qty8" placeholder="Enter quantity"/>
                 </div>
-                <div class="col-4 text-center">
-                    <label id="product8"> Realme buds T300 </label>
-                    <img src="image/realme buds t300.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-                    <label for="product8" id="price8">37000.00</label>
-                    <input type="number" class="form-control" id="qty8" placeholder="Enter quantity"/><br>
-                </div>
-                <div class="col-4">
-                    <label for="carts"> Orders </label<br>
-                    <textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px;height: 400;font-size: 12px;"> </textarea>
-                    <input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
-                    <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
-                    <input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <div class="order-summary">
+                    <label for="carts">Orders</label>
+                    <textarea class="form-control" rows="10" id="carts" readonly style="font-size: 12px;"></textarea>
+                    <input type="text" class="form-control border-0 mt-2" id="total" readonly placeholder="Total"/>
+                    <input type="number" class="form-control mt-2" id="cash" placeholder="Cash Tendered"/>
+                    <input type="text" class="form-control border-0 mt-2" id="change" readonly placeholder="Change"/>
                 </div>
             </div>
         </div>
-        <script src="app.js"></script>
-    </body>
+    </div>
+
+    <!-- Modal for image zoom -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Product Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle image click and modal display
+        document.querySelectorAll('.product-image').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('modalImage').src = this.src;
+            });
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
 </html>
